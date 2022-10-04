@@ -7,27 +7,41 @@ removeControversialDiscussionLinks(
 
 function removeControversialDiscussionLinks(sublines) {
     for (let subline of sublines) {
+        wrapSubmission(subline)
         const score = getScore(subline);
         const commentsTotal = getCommentsTotal(subline);
 
         if (isControversial(score, commentsTotal)) {
-            let discussionLinks = getDiscussionLinks(subline);
+            markControversialSubline(subline)
 
+            let discussionLinks = getDiscussionLinks(subline);
             removeLinks(discussionLinks);
         }
     }
 }
 
 
+function wrapSubmission(subline) {
+    const sublineContainer = subline.parentNode.parentNode;
+    const titleContainer = sublineContainer.previousSibling;
+
+    let containingDiv = document.createElement('div');
+    sublineContainer.parentNode.insertBefore(containingDiv, titleContainer)
+
+    containingDiv.appendChild(titleContainer);
+    containingDiv.appendChild(sublineContainer);
+}
+
+
 function getScore(item) {
-    let scoreText = item.getElementsByClassName('score')[0].textContent;
+    const scoreText = item.getElementsByClassName('score')[0].textContent;
     return parseInt(scoreText.split(' ')[0]);
 }
 
 
 function getCommentsTotal(item) {
-    let links = item.getElementsByTagName('a');
-    let commentsText = links[links.length - 1].textContent;
+    const links = item.getElementsByTagName('a');
+    const commentsText = links[links.length - 1].textContent;
     if (commentsText !== 'discuss') {
         return parseInt(commentsText.split(' ')[0]);
     }
@@ -43,8 +57,19 @@ function isControversial(score, nComments) {
 }
 
 
+function markControversialSubline(subline) {
+    const sublineContainer = subline.parentNode.parentNode;
+    const titleContainer = sublineContainer.previousElementSibling;
+    const containingDiv = titleContainer.parentNode;
+
+    containingDiv.classList.add('controversial-submission');
+    titleContainer.classList.add('controversial-title');
+    sublineContainer.classList.add('controversial-subline');
+}
+
+
 function getDiscussionLinks(item) {
-    let links = item.getElementsByTagName('a');
+    const links = item.getElementsByTagName('a');
     let discussionLinks = [];
     for (let link of links) {
         if (/item\?id=\d+$/.test(link.href)) {
