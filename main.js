@@ -1,6 +1,4 @@
-COMMENTS_THRESHOLD = 40;
-RATIO_MINIMUM = 1.25;
-
+import * as constants from './constants.js';
 
 removeControversialDiscussionLinks(
     document.getElementsByClassName('subline')
@@ -40,7 +38,8 @@ function getCommentsTotal(item) {
 function isControversial(score, nComments) {
     const ratio = score / nComments;
 
-    return nComments > COMMENTS_THRESHOLD && ratio < RATIO_MINIMUM;
+    return nComments > constants.COMMENTS_THRESHOLD
+        && ratio < constants.RATIO_MINIMUM;
 }
 
 
