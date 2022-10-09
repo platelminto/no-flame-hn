@@ -1,3 +1,16 @@
 .controversial-submission {
-    border: 1px solid #f8c0c0;
+
+}
+
+.controversial-title {
+
+}
+
+.controversial-subline {
+
+}
+
+.controversial-comments-text {
+    color: #b7b7b7;
+    border: 1px dotted #f8c0c0;
 }

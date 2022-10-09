@@ -82,8 +82,14 @@ function getDiscussionLinks(item) {
 
 function removeLinks(linkElements) {
     for (let linkElement of linkElements) {
+        const linkText = document.createTextNode(linkElement.textContent)
+        const linkSpan = document.createElement("span")
+        linkSpan.classList.add('controversial-comments-text')
+
+        linkSpan.appendChild(linkText)
+
         linkElement.parentNode.replaceChild(
-            document.createTextNode(linkElement.textContent),
+            linkSpan,
             linkElement
         );
     }
