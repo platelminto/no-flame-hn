@@ -1,9 +1,11 @@
 # no-flame-hn
-Remove discussion links to more 'controversial' Hacker News items.
+Remove discussion links to more 'controversial' Hacker News items, leaving the item itself accessible.
 
-Controversional is defined as an item with at least X comments, and a score/comment ratio < Y. 
+Controversial is defined as an item with at least X comments, and a score/comment ratio < Y. 
 
-X and Y are defined in `main.js`.
+X and Y are defined in `constants.js`.
+
+Self posts (e.g. Ask HNs) will still be accessible through the main submission link. This is intended, since the content of a self post is the discussion page. 
 
 ## To-do
 
@@ -11,10 +13,12 @@ X and Y are defined in `main.js`.
 - [x] Move comments threshold and ratio minimum to constants file.
 - [x] Move html stuff to separate folder.
 - [x] Add .css file that changes affected items.
-- [ ] Figure out how to style them more.
-- [ ] Separate controversial comments link and timestamp link styling.
-- [ ] Maybe keep 'click link' cursor, rather than it switching to just text cursor, and point to empty/doing nothing link.
-- [ ] Add tests.
-- [ ] Handle Ask/Show HNs differently (they tend to have more comments even when not controversial, driving the 'normal' ratio down). 
-- [ ] Mess around with ratio/comments threshold. 
+- [x] Figure out how to style them more.
+- [x] Separate controversial comments link and timestamp link styling.
+- [x] Maybe keep 'click link' cursor, rather than it switching to just text cursor, and point to empty/doing nothing link.
+- [x] ~~Add tests.~~ Eh we don't need them.
 - [ ] Make into extension.
+- [ ] Mess around with ratio/comments threshold. 
+- [ ] Mess around with styling based on usage.
+- [ ] Make extension configurable (hide/not-hides, pre-defined styles on/off)
+- [ ] Make extension per-CSS-class configurable.

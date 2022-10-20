@@ -1,5 +1,5 @@
 .controversial-submission {
-
+    /*display: none;*/
 }
 
 .controversial-title {
@@ -7,10 +7,26 @@
 }
 
 .controversial-subline {
+    /*border: 1px solid black;*/
+}
+
+.controversial-general-link {
+    cursor: not-allowed;
+}
+
+.controversial-comments-link {
+    color: #b6b6b6;
+    border: 1px dotted #f8c0c0;
+}
+
+.controversial-age-link {
 
 }
 
-.controversial-comments-text {
-    color: #b7b7b7;
-    border: 1px dotted #f8c0c0;
+.controversial-from-link {
+
+}
+
+.controversial-user-link {
+
 }
