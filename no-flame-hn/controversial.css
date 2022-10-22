@@ -1,12 +1,12 @@
-.controversial-submission {
-    /*display: none;*/
+div {
+    display: block;
 }
 
 .controversial-title {
 
 }
 
-.controversial-subline {
+.controversial-subtext {
     /*border: 1px solid black;*/
 }
 

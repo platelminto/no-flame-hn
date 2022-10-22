@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "no-flame-hn",
+  "version": "1.0",
+  "description": "Removes access to Hacker News items' discussions when they are too heated.",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://news.ycombinator.com/",
+        "https://news.ycombinator.com/news*",
+        "https://news.ycombinator.com/front*"
+        ],
+      "js": [
+        "noFlameHN.js"
+      ],
+      "css": ["controversial.css"]
+    }
+  ]
+}
