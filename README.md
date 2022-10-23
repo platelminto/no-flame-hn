@@ -7,7 +7,17 @@ X and Y are defined at the top of the js file.
 
 Self posts (e.g. Ask HNs) will still be accessible through the main submission link. This is intended, since the content of a self post is the discussion page. 
 
-Show HNs are also always accessible. 
+Show HNs are also always accessible.
+
+## Installation
+
+For now, you'll need to install the extension manually.
+
+[Firefox instructions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+
+[Chrome instructions](https://superuser.com/questions/247651/how-does-one-install-an-extension-for-chrome-browser-from-the-local-file-system).
+
+
 
 ## To-do
 
