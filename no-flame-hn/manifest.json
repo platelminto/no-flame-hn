@@ -20,5 +20,11 @@
       ],
       "css": ["controversial.css"]
     }
-  ]
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "gmomigliano@protonmail.com"
+    }
+  }
 }

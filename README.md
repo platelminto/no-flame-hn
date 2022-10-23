@@ -13,7 +13,13 @@ Show HNs are also always accessible.
 
 Clone this repo.
 
-For now, you'll need to install the extension manually.
+### Firefox only
+
+Drag the `web-ext-artifacts/no-flame-hn.xpi` file into your browser window.
+
+## Testing
+
+Install the extension manually. This only lasts until the next time you restart your browser.
 
 [Firefox instructions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
 
