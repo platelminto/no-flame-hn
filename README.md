@@ -11,6 +11,8 @@ Show HNs are also always accessible.
 
 ## Installation
 
+Clone this repo.
+
 For now, you'll need to install the extension manually.
 
 [Firefox instructions](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
@@ -26,7 +28,7 @@ For now, you'll need to install the extension manually.
 - [x] Figure out how to style them more.
 - [x] Separate controversial comments link and timestamp link styling.
 - [x] Maybe keep 'click link' cursor, rather than it switching to just text cursor, and point to empty/doing nothing link.
-- [x] ~~Add tests.~~ Eh we don't need them.
+- [x] ~~Add tests.~~ Eh not needed.
 - [x] Make into extension.
 - [ ] Mess around with ratio/comments threshold. 
 - [ ] Mess around with styling based on usage.
