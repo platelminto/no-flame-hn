@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "no-flame-hn",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Removes access to Hacker News items' discussions when they are too heated.",
 
   "permissions": [

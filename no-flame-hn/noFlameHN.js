@@ -61,8 +61,13 @@ function isControversial(submission) {
 }
 
 function getScore(subtext) {
-    const scoreText = subtext.getElementsByClassName('score')[0].textContent;
-    return parseInt(scoreText.split(' ')[0]);
+    const scoreElement = subtext.querySelector("span.subline > span.score");
+    if (scoreElement) {
+        const scoreText = scoreElement.textContent;
+        return parseInt(scoreText.split(' ')[0]);
+    }
+
+    return 0;
 }
 
 
